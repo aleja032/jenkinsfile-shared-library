@@ -1,6 +1,6 @@
 def call(Map params = [:]) {
     pipeline {
-        agent any
+        agent { label 'agent1' }
         environment {
             VENV = params.get('venv', 'venv')
             REQUIREMENTS = params.get('requirements', 'requirements.txt')
